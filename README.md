@@ -42,8 +42,10 @@ bashexport FLASK_APP=server/app.py
 flask db init
 flask db migrate -m "Initial migration"
 flask db upgrade
+
 5. Seed the Database
 python -m server.seed
+
 This creates sample data:
 
 User: username karoki, password Karokin35!
