@@ -37,21 +37,12 @@ Create a PostgreSQL database:
 bash# Using PostgreSQL command line
 createdb late_show_db
 
-# Or using psql
-psql -U postgres
-CREATE DATABASE late_show_db;
-\q
-4. Environment Configuration
-Create a .env file in the project root:
-bashDATABASE_URI=postgresql://username:password@localhost:5432/late_show_db
-JWT_SECRET_KEY=your-super-secure-secret-key-here
-Replace username and password with your PostgreSQL credentials.
-5. Database Migration
+4. Database Migration
 bashexport FLASK_APP=server/app.py
 flask db init
 flask db migrate -m "Initial migration"
 flask db upgrade
-6. Seed the Database
+5. Seed the Database
 python -m server.seed
 This creates sample data:
 
@@ -60,7 +51,7 @@ User: username karoki, password Karokin35!
 3 episodes
 3 appearances with ratings
 
-7. Run the Application
+6. Run the Application
 bashflask run
 The API will be available at http://localhost:5000
 
