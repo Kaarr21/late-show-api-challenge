@@ -52,7 +52,7 @@ flask db init
 flask db migrate -m "Initial migration"
 flask db upgrade
 6. Seed the Database
-bashpython server/seed.py
+python -m server.seed
 This creates sample data:
 
 User: username karoki, password Karokin35!
